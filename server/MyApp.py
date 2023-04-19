@@ -1,5 +1,4 @@
 from PyQt5.QtWidgets import QApplication
-
 from server.bis.EataBis import EataBis
 from server.bis.PltBis import PltBis
 from server.plux.XActivity import XActivity
@@ -11,7 +10,7 @@ class MyApp(XActivity):
     def __init__(self):
         XActivity.__init__(self)
         self.etat = EataBis()
-        self.plt = PltBis(self.etat.mapi.crust)
+        self.plt = PltBis(self.etat.mapi.crust,self.etat.mapi.get_circle_image)
 
 
 if __name__ == '__main__':
